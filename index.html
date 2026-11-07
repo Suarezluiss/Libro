@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#060919">
+    <meta name="description"
+        content="Universos de Letras: libro digital de literatura. Una aventura entre palabras, imaginación y sentimientos.">
+    <title>Universos de Letras</title>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+
+    <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+    <main class="stage" data-state="front">
+
+        <!-- Fondo: cielo nocturno con letras que flotan (las crea Script.js) -->
+        <div class="sky" id="sky" aria-hidden="true"></div>
+
+        <div class="scene">
+            <div class="floor" aria-hidden="true"></div>
+
+            <div class="book" id="book" role="group" aria-label="Libro Universos de Letras">
+
+                <!-- 1. PORTADA -->
+                <section class="page cover" aria-label="Portada">
+                    <div class="cover-t">
+                        <svg class="orbits" viewBox="0 0 400 560" aria-hidden="true" focusable="false">
+                            <defs>
+                                <radialGradient id="moonFront" cx="38%" cy="32%" r="70%">
+                                    <stop offset="0" stop-color="#fff3c4" />
+                                    <stop offset=".55" stop-color="#e3b657" />
+                                    <stop offset="1" stop-color="#9c6a1f" />
+                                </radialGradient>
+                            </defs>
+                            <g fill="none" stroke="#e8c978" stroke-width="1">
+                                <g transform="rotate(-24 200 372)">
+                                    <ellipse cx="200" cy="372" rx="158" ry="56" stroke-opacity=".55" />
+                                    <text x="358" y="379" transform="rotate(24 358 372)" text-anchor="middle"
+                                        fill="#f1d68f" stroke="none" font-family="Cormorant Garamond, serif"
+                                        font-style="italic" font-size="24">A</text>
+                                    <text x="42" y="379" transform="rotate(24 42 372)" text-anchor="middle"
+                                        fill="#f1d68f" stroke="none" font-family="Cormorant Garamond, serif"
+                                        font-style="italic" font-size="24">Z</text>
+                                </g>
+                                <g transform="rotate(32 200 372)">
+                                    <ellipse cx="200" cy="372" rx="128" ry="44" stroke-opacity=".5"
+                                        stroke-dasharray="2 6" />
+                                    <text x="328" y="379" transform="rotate(-32 328 372)" text-anchor="middle"
+                                        fill="#f1d68f" stroke="none" font-family="Cormorant Garamond, serif"
+                                        font-style="italic" font-size="22">Ñ</text>
+                                    <circle cx="72" cy="372" r="3.2" fill="#f1d68f" stroke="none" />
+                                </g>
+                                <circle cx="200" cy="372" r="86" stroke-opacity=".22" />
+                            </g>
+                            <circle cx="200" cy="372" r="30" fill="url(#moonFront)" />
+                            <g fill="#f1d68f">
+                                <path d="M0-6L1.6-1.6 6 0 1.6 1.6 0 6-1.6 1.6-6 0-1.6-1.6Z"
+                                    transform="translate(66 96)" />
+                                <path d="M0-6L1.6-1.6 6 0 1.6 1.6 0 6-1.6 1.6-6 0-1.6-1.6Z"
+                                    transform="translate(338 142) scale(.8)" />
+                                <path d="M0-6L1.6-1.6 6 0 1.6 1.6 0 6-1.6 1.6-6 0-1.6-1.6Z"
+                                    transform="translate(310 488) scale(1.1)" />
+                                <path d="M0-6L1.6-1.6 6 0 1.6 1.6 0 6-1.6 1.6-6 0-1.6-1.6Z"
+                                    transform="translate(92 468) scale(.7)" />
+                                <circle cx="118" cy="168" r="1.3" />
+                                <circle cx="296" cy="84" r="1.2" />
+                                <circle cx="48" cy="300" r="1.2" />
+                                <circle cx="356" cy="318" r="1.3" />
+                            </g>
+                        </svg>
+
+                        <div class="cover-top">
+                            <p class="tag">Libro digital de literatura</p>
+                        </div>
+
+                        <h1>UNIVERSOS<br><small>de</small> LETRAS</h1>
+
+                        <div class="cover-bottom">
+                            <p class="credit">Una aventura entre palabras, imaginación y sentimientos</p>
+                            <p class="credit">Autor: David Santiago Teatín y Sharol López</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. PRESENTACIÓN -->
+                <section class="page">
+                    <h2>Presentación</h2>
+
+                    <p class="lead">
+                        Cada palabra es una pequeña puerta. Algunas nos llevan al pasado,
+                        otras nos acercan a nuestros sentimientos y muchas nos permiten
+                        visitar lugares que solamente existen en nuestra imaginación.
+                    </p>
+
+                    <p>
+                        <b>Universos de Letras</b> nace de la idea de que la literatura
+                        es mucho más que leer libros. Es una manera de descubrir el mundo,
+                        comprender a las personas y expresar aquello que muchas veces
+                        no sabemos cómo decir.
+                    </p>
+
+                    <p>
+                        En estas páginas encontrarás pensamientos, relatos, poesía y
+                        reflexiones creadas para demostrar que todos tenemos una historia
+                        que merece ser contada.
+                    </p>
+
+                    <p>
+                        Este libro es una invitación a imaginar sin límites, a encontrar
+                        belleza en las cosas sencillas y a descubrir el poder que puede
+                        tener una sola frase.
+                    </p>
+
+                    <blockquote>
+                        «Las palabras no tienen alas, pero pueden llevarnos muy lejos».
+                    </blockquote>
+
+                    <p class="credit">Una creación literaria de estudiante.</p>
+                </section>
+
+                <!-- 3. ÍNDICE -->
+                <section class="page">
+                    <h2>Índice</h2>
+
+                    <ol class="toc" id="toc">
+                        <li><button type="button" data-goto="2"><span>Presentación</span><i></i><b>2</b></button></li>
+                        <li><button type="button" data-goto="4"><span>El universo escondido en las
+                                    palabras</span><i></i><b>4</b></button></li>
+                        <li><button type="button" data-goto="5"><span>Cuando las letras cobran
+                                    vida</span><i></i><b>5</b></button></li>
+                        <li><button type="button" data-goto="6"><span>La imaginación: una puerta
+                                    infinita</span><i></i><b>6</b></button></li>
+                        <li><button type="button" data-goto="7"><span>La biblioteca de los sueños
+                                    perdidos</span><i></i><b>7</b></button></li>
+                        <li><button type="button" data-goto="8"><span>El secreto de la
+                                    biblioteca</span><i></i><b>8</b></button></li>
+                        <li><button type="button" data-goto="9"><span>El lenguaje de los
+                                    sentimientos</span><i></i><b>9</b></button></li>
+                        <li><button type="button" data-goto="10"><span>Mi mundo de papel</span><i></i><b>10</b></button>
+                        </li>
+                        <li><button type="button" data-goto="11"><span>El arte de contar
+                                    historias</span><i></i><b>11</b></button></li>
+                        <li><button type="button" data-goto="12"><span>La literatura y nuestra
+                                    sociedad</span><i></i><b>12</b></button></li>
+                        <li><button type="button" data-goto="13"><span>Las palabras en el mundo
+                                    digital</span><i></i><b>13</b></button></li>
+                        <li><button type="button" data-goto="14"><span>Pequeña colección de
+                                    relatos</span><i></i><b>14</b></button></li>
+                        <li><button type="button" data-goto="15"><span>Mi reflexión como
+                                    estudiante</span><i></i><b>15</b></button></li>
+                        <li><button type="button" data-goto="16"><span>Contraportada</span><i></i><b>16</b></button>
+                        </li>
+                    </ol>
+
+                    <p class="credit">
+                        Dieciséis páginas para recorrer el maravilloso universo
+                        de la literatura.
+                    </p>
+                </section>
+
+                <!-- 4. LAS PALABRAS -->
+                <section class="page">
+                    <h2>El universo escondido en las palabras</h2>
+
+                    <p>
+                        Las palabras forman parte de nuestra vida desde que aprendemos
+                        a hablar. Con ellas saludamos, preguntamos, soñamos, explicamos
+                        lo que sentimos y compartimos nuestras experiencias.
+                    </p>
+
+                    <p>
+                        Sin embargo, una palabra puede significar mucho más de lo que
+                        aparece en un diccionario. La palabra <i>hogar</i>, por ejemplo,
+                        puede representar un lugar, pero también el cariño de una familia,
+                        los recuerdos de la infancia y la tranquilidad de sentirse protegido.
+                    </p>
+
+                    <p>
+                        La literatura utiliza ese poder para construir imágenes,
+                        emociones y pensamientos. Un escritor puede convertir una
+                        tarde lluviosa en una aventura o transformar una despedida
+                        en un recuerdo inolvidable.
+                    </p>
+
+                    <p>
+                        Cada lector interpreta los textos desde sus propias experiencias.
+                        Por eso, una misma historia puede despertar alegría en una persona
+                        y nostalgia en otra.
+                    </p>
+
+                    <blockquote>
+                        Las palabras son pequeñas semillas de las que pueden crecer
+                        enormes mundos.
+                    </blockquote>
+                </section>
+
+                <!-- 5. LAS LETRAS -->
+                <section class="page">
+                    <h2>Cuando las letras cobran vida</h2>
+
+                    <p>
+                        Imaginemos por un momento que las letras pudieran hablar.
+                        La A sería una aventurera que siempre busca nuevos caminos.
+                        La B tendría dos grandes abrazos y la C sería una luna
+                        abierta esperando descubrir estrellas.
+                    </p>
+
+                    <p>
+                        Cuando se encuentran, las letras dejan de ser simples signos.
+                        Se unen para formar palabras que tienen personalidad,
+                        sonido y significado.
+                    </p>
+
+                    <p>
+                        Algunas palabras parecen suaves, como <i>brisa</i> y <i>susurro</i>.
+                        Otras transmiten fuerza, como <i>tormenta</i> y <i>libertad</i>.
+                        Incluso existen palabras que nos hacen sonreír solamente
+                        al pronunciarlas.
+                    </p>
+
+                    <p>
+                        Aprender a utilizar el lenguaje es descubrir que tenemos
+                        una herramienta para crear, enseñar, expresar y transformar.
+                    </p>
+
+                    <blockquote>
+                        Cada letra tiene una voz; juntas pueden contar una vida.
+                    </blockquote>
+                </section>
+
+                <!-- 6. IMAGINACIÓN -->
+                <section class="page">
+                    <h2>La imaginación: una puerta infinita</h2>
+
+                    <p>
+                        La imaginación es la capacidad de crear situaciones,
+                        personajes y lugares que no necesariamente existen.
+                        Es una de las herramientas más importantes de la literatura.
+                    </p>
+
+                    <p>
+                        Gracias a ella podemos viajar a castillos escondidos,
+                        conversar con personajes fantásticos, explorar planetas
+                        desconocidos o descubrir secretos en una pequeña ciudad.
+                    </p>
+
+                    <p>
+                        No necesitamos salir de casa para vivir una aventura.
+                        A veces basta con abrir un libro y permitir que nuestra
+                        mente complete aquello que el autor comenzó a describir.
+                    </p>
+
+                    <p>
+                        Ser imaginativo también significa observar la realidad
+                        de una manera diferente. Una nube puede convertirse en
+                        un barco y una simple hoja puede parecer una carta
+                        enviada por el viento.
+                    </p>
+
+                    <blockquote>
+                        Imaginar es darle permiso a la mente para visitar
+                        lugares que todavía no existen.
+                    </blockquote>
+                </section>
+
+                <!-- 7. CUENTO ORIGINAL -->
+                <section class="page">
+                    <h2>La biblioteca de los sueños perdidos</h2>
+
+                    <p class="lead">Un cuento original</p>
+
+                    <p>
+                        En un pequeño pueblo rodeado de montañas vivía una joven
+                        llamada Elena. Le gustaba observar las estrellas y escribir
+                        en un cuaderno que llevaba siempre consigo.
+                    </p>
+
+                    <p>
+                        Una tarde, mientras caminaba por una calle antigua,
+                        encontró una puerta de madera que nunca había visto.
+                        Tenía una inscripción dorada que decía:
+                        <i>«Aquí descansan los sueños que alguien olvidó».</i>
+                    </p>
+
+                    <p>
+                        Movida por la curiosidad, Elena abrió la puerta.
+                        Al entrar encontró una biblioteca inmensa, con estanterías
+                        que parecían llegar hasta el cielo.
+                    </p>
+
+                    <p>
+                        Los libros tenían colores diferentes. Algunos brillaban
+                        como el sol; otros parecían guardar pequeñas tormentas
+                        en sus páginas.
+                    </p>
+
+                    <p>
+                        Un anciano de cabello blanco apareció detrás de una mesa.
+                        Llevaba unas gafas redondas y una llave plateada colgada
+                        del cuello.
+                    </p>
+
+                    <p>
+                        —Bienvenida —dijo con una sonrisa—. Has llegado al lugar
+                        donde viven los sueños que las personas dejaron de perseguir.
+                    </p>
+                </section>
+
+                <!-- 8. CONTINUACIÓN DEL CUENTO -->
+                <section class="page">
+                    <h2>El secreto de la biblioteca</h2>
+
+                    <p>
+                        Elena observó los libros con asombro. En uno encontró
+                        el sueño de un niño que quería aprender a tocar piano.
+                        En otro descubrió la historia de una mujer que deseaba
+                        conocer el mar.
+                    </p>
+
+                    <p>
+                        —¿Por qué están aquí? —preguntó Elena.
+                    </p>
+
+                    <p>
+                        —Porque algunas personas dejan de creer en lo que desean
+                        cuando encuentran dificultades —respondió el anciano—.
+                        Los sueños no desaparecen, solamente esperan una oportunidad.
+                    </p>
+
+                    <p>
+                        Entonces el anciano le entregó un libro vacío.
+                        En su portada estaba escrito el nombre de Elena.
+                    </p>
+
+                    <p>
+                        —Este libro contiene tu futuro, pero sus páginas todavía
+                        no están escritas. Tú decides qué historia quieres construir.
+                    </p>
+
+                    <p>
+                        Elena comprendió que había pasado demasiado tiempo
+                        imaginando lo que quería hacer sin atreverse a comenzar.
+                        Tomó su cuaderno y escribió su primer compromiso:
+                        nunca dejaría de aprender ni de crear.
+                    </p>
+
+                    <p>
+                        Cuando salió de la biblioteca, la puerta desapareció.
+                        Sin embargo, algo había cambiado para siempre:
+                        ahora sabía que los sueños necesitan esfuerzo para hacerse realidad.
+                    </p>
+
+                    <blockquote>
+                        A veces, el comienzo de una gran historia es simplemente
+                        decidir no rendirse.
+                    </blockquote>
+                </section>
+
+                <!-- 9. SENTIMIENTOS -->
+                <section class="page">
+                    <h2>El lenguaje de los sentimientos</h2>
+
+                    <p>
+                        La literatura nos permite expresar emociones que a veces
+                        son difíciles de explicar. Mediante poemas, relatos y
+                        reflexiones podemos hablar de alegría, tristeza, miedo,
+                        esperanza, amor y amistad.
+                    </p>
+
+                    <p>
+                        Un escritor puede describir la tristeza como una lluvia
+                        que no termina o representar la felicidad como un jardín
+                        lleno de flores.
+                    </p>
+
+                    <p>
+                        Estas comparaciones reciben el nombre de recursos literarios.
+                        Entre ellos encontramos:
+                    </p>
+
+                    <ul class="list">
+                        <li><b>Metáfora:</b> relaciona dos ideas sin utilizar una comparación directa.</li>
+                        <li><b>Símil:</b> compara elementos utilizando palabras como «igual que» o «como».</li>
+                        <li><b>Personificación:</b> atribuye características humanas a objetos o animales.</li>
+                        <li><b>Hipérbole:</b> exagera una situación para darle mayor intensidad.</li>
+                        <li><b>Repetición:</b> utiliza palabras o expresiones para destacar una idea.</li>
+                    </ul>
+
+                    <p>
+                        Leer también nos ayuda a comprender que cada persona
+                        vive y expresa sus emociones de una manera diferente.
+                    </p>
+                </section>
+
+                <!-- 10. POESÍA ORIGINAL -->
+                <section class="page">
+                    <h2>Mi mundo de papel</h2>
+
+                    <p class="lead">Poema original</p>
+
+                    <div class="poem">
+                        <p>
+                            Tengo un mundo entre mis manos,<br>
+                            construido de papel,<br>
+                            donde viven mil historias<br>
+                            que algún día quiero leer.
+                        </p>
+
+                        <p>
+                            Hay estrellas en mis hojas,<br>
+                            hay caminos por andar,<br>
+                            hay palabras que me enseñan<br>
+                            que siempre puedo soñar.
+                        </p>
+
+                        <p>
+                            Si la vida trae tormentas,<br>
+                            escribiré junto al sol,<br>
+                            porque encuentro en cada letra<br>
+                            un refugio y una voz.
+                        </p>
+
+                        <p>
+                            No hay fronteras en los libros,<br>
+                            no hay límites al pensar,<br>
+                            cada página es un viaje,<br>
+                            cada historia, un despertar.
+                        </p>
+
+                        <p>
+                            Y aunque el tiempo pase lento<br>
+                            y las hojas lleguen al final,<br>
+                            quedarán vivos mis sueños<br>
+                            en las letras de este lugar.
+                        </p>
+                    </div>
+
+                    <blockquote>
+                        Un poema puede decir en pocos versos lo que el corazón
+                        guarda durante años.
+                    </blockquote>
+                </section>
+
+                <!-- 11. CONTAR HISTORIAS -->
+                <section class="page">
+                    <h2>El arte de contar historias</h2>
+
+                    <p>
+                        Contar historias es una de las formas más antiguas
+                        de compartir conocimientos y experiencias.
+                        Desde tiempos remotos, las personas han transmitido
+                        relatos de generación en generación.
+                    </p>
+
+                    <p>
+                        Una historia necesita elementos que permitan al lector
+                        comprender lo que sucede:
+                    </p>
+
+                    <ul class="list">
+                        <li><b>Personajes:</b> quienes participan en los acontecimientos.</li>
+                        <li><b>Espacio:</b> el lugar donde ocurre la historia.</li>
+                        <li><b>Tiempo:</b> el momento o periodo en que suceden los hechos.</li>
+                        <li><b>Narrador:</b> la voz que cuenta los acontecimientos.</li>
+                        <li><b>Trama:</b> el conjunto de situaciones que forman el relato.</li>
+                    </ul>
+
+                    <p>
+                        También es importante reconocer tres momentos:
+                        el inicio, donde conocemos la situación; el desarrollo,
+                        donde aparece el conflicto; y el desenlace, donde
+                        descubrimos cómo termina.
+                    </p>
+
+                    <p>
+                        Una buena historia no necesita ser complicada.
+                        Puede comenzar con una persona, un problema y una decisión.
+                    </p>
+
+                    <blockquote>
+                        Las historias nos permiten vivir muchas vidas sin dejar
+                        de ser nosotros mismos.
+                    </blockquote>
+                </section>
+
+                <!-- 12. LITERATURA Y SOCIEDAD -->
+                <section class="page">
+                    <h2>La literatura y nuestra sociedad</h2>
+
+                    <p>
+                        La literatura no está separada de la vida cotidiana.
+                        En sus páginas encontramos costumbres, problemas sociales,
+                        tradiciones, sueños y formas de pensar de diferentes épocas.
+                    </p>
+
+                    <p>
+                        Los escritores pueden utilizar sus obras para denunciar
+                        injusticias, defender la libertad, conservar la memoria
+                        de sus pueblos y dar voz a quienes pocas veces son escuchados.
+                    </p>
+
+                    <p>
+                        En Colombia, la literatura representa una gran riqueza
+                        cultural. Autores como Gabriel García Márquez, Jorge Isaacs
+                        y Rafael Pombo han dejado obras importantes que forman
+                        parte de nuestra identidad literaria.
+                    </p>
+
+                    <p>
+                        Leer estas obras nos permite conocer diferentes regiones,
+                        personajes y maneras de comprender el país.
+                    </p>
+
+                    <p>
+                        Además, la literatura desarrolla nuestra capacidad crítica.
+                        Nos enseña a preguntar, comparar opiniones y construir
+                        nuestras propias ideas.
+                    </p>
+
+                    <blockquote>
+                        Leer el mundo también significa aprender a comprender
+                        a las personas que lo habitan.
+                    </blockquote>
+                </section>
+
+                <!-- 13. ERA DIGITAL -->
+                <section class="page">
+                    <h2>Las palabras en el mundo digital</h2>
+
+                    <p>
+                        La tecnología ha cambiado la manera en que leemos,
+                        escribimos y compartimos información. Actualmente,
+                        podemos encontrar libros electrónicos, revistas digitales,
+                        audiolibros y bibliotecas en línea.
+                    </p>
+
+                    <p>
+                        Un texto puede llegar a miles de lectores mediante
+                        una pantalla. También podemos escribir historias,
+                        publicar poemas y compartir nuestras opiniones
+                        con personas de diferentes lugares.
+                    </p>
+
+                    <p>
+                        Sin embargo, este avance trae responsabilidades.
+                        Debemos comprobar la información que encontramos,
+                        respetar los derechos de autor y evitar copiar
+                        el trabajo de otras personas.
+                    </p>
+
+                    <p>
+                        La tecnología es una herramienta valiosa cuando
+                        se utiliza para aprender, investigar y desarrollar
+                        nuestra creatividad.
+                    </p>
+
+                    <p>
+                        Aunque cambien los formatos y los dispositivos,
+                        la esencia de la literatura permanece:
+                        comunicar ideas y despertar emociones.
+                    </p>
+
+                    <blockquote>
+                        Una pantalla puede mostrar las palabras, pero es
+                        la imaginación la que les da vida.
+                    </blockquote>
+                </section>
+
+                <!-- 14. RELATOS -->
+                <section class="page">
+                    <h2>Pequeña colección de relatos</h2>
+
+                    <h3>El reloj detenido</h3>
+                    <p>
+                        En una habitación antigua había un reloj que llevaba
+                        años sin funcionar. Una niña lo observaba todos los días.
+                        Una mañana descubrió que no necesitaba repararlo:
+                        solamente debía aprender a disfrutar el tiempo que tenía.
+                    </p>
+
+                    <h3>La última estrella</h3>
+                    <p>
+                        Cada noche un niño buscaba una estrella diferente.
+                        Una noche el cielo estaba oscuro, pero él sonrió.
+                        Había comprendido que incluso cuando no podemos ver
+                        la luz, podemos conservar la esperanza.
+                    </p>
+
+                    <h3>La carta invisible</h3>
+                    <p>
+                        Una mujer encontró una carta sin palabras.
+                        Al principio pensó que estaba vacía, hasta que recordó
+                        todas las cosas bonitas que alguien había hecho por ella.
+                        Entonces comprendió el mensaje: algunas formas de amor
+                        no necesitan escritura.
+                    </p>
+
+                    <blockquote>
+                        No importa el tamaño de una historia, sino lo que
+                        consigue despertar en quien la lee.
+                    </blockquote>
+                </section>
+
+                <!-- 15. REFLEXIÓN -->
+                <section class="page">
+                    <h2>Mi reflexión como estudiante</h2>
+
+                    <p class="lead">
+                        La literatura es una oportunidad para conocer,
+                        aprender y descubrir nuevas maneras de pensar.
+                    </p>
+
+                    <p>
+                        Al realizar este libro comprendí que escribir no consiste
+                        solamente en juntar palabras. También significa organizar
+                        ideas, expresar sentimientos y encontrar una forma propia
+                        de comunicar lo que pensamos.
+                    </p>
+
+                    <p>
+                        Como estudiante, considero que la lectura es importante
+                        porque fortalece nuestro vocabulario, mejora la escritura
+                        y nos permite comprender diferentes realidades.
+                    </p>
+
+                    <p>
+                        También aprendí que no existe una sola manera de crear
+                        literatura. Cada persona puede escribir desde sus
+                        experiencias, su imaginación y su manera de observar
+                        el mundo.
+                    </p>
+
+                    <p>
+                        Mi invitación es que nunca dejemos de leer ni de escribir.
+                        Tal vez una idea que hoy parece pequeña pueda convertirse
+                        mañana en una gran historia.
+                    </p>
+
+                    <blockquote>
+                        El mejor libro que podemos comenzar a escribir
+                        es aquel que lleva nuestra propia voz.
+                    </blockquote>
+
+                    <p class="credit">
+                        Gracias por recorrer este universo de letras.
+                    </p>
+                </section>
+
+                <!-- 16. CONTRAPORTADA -->
+                <section class="page cover end" aria-label="Contraportada">
+                    <div class="cover-t">
+                        <svg class="mark" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <defs>
+                                <radialGradient id="moonBack" cx="38%" cy="32%" r="70%">
+                                    <stop offset="0" stop-color="#fff3c4" />
+                                    <stop offset=".55" stop-color="#e3b657" />
+                                    <stop offset="1" stop-color="#9c6a1f" />
+                                </radialGradient>
+                            </defs>
+                            <g fill="none" stroke="#e8c978" stroke-opacity=".6" stroke-width="1">
+                                <circle cx="60" cy="60" r="52" stroke-opacity=".3" />
+                                <ellipse cx="60" cy="60" rx="50" ry="17" transform="rotate(-24 60 60)" />
+                            </g>
+                            <circle cx="60" cy="60" r="11" fill="url(#moonBack)" />
+                            <circle cx="104" cy="44" r="2.6" fill="#f1d68f" />
+                        </svg>
+
+                        <blockquote>
+                            «Cada libro es una puerta y cada lector
+                            decide hasta dónde quiere viajar».
+                        </blockquote>
+
+                        <h3>UNIVERSOS DE LETRAS</h3>
+
+                        <p>
+                            Un recorrido por la imaginación, los sentimientos
+                            y el maravilloso poder de las palabras.
+                        </p>
+
+                        <div class="cover-bottom">
+                            <p class="credit">
+                                Libro digital de literatura
+                            </p>
+
+                            <p class="credit">
+                                Autor: David Santiago Teatín y Sharol López
+                            </p>
+
+                            <p class="credit">
+                                Año: 2026
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- CONTROLES DEL LIBRO -->
+        <div class="dock">
+            <p class="hint" id="hint">Toca la portada para abrir el libro</p>
+
+            <nav class="ctrl" aria-label="Controles del libro">
+                <button type="button" id="home" title="Ir a la portada" aria-label="Ir a la portada">⌂</button>
+                <button type="button" id="prev" title="Página anterior" aria-label="Página anterior">‹</button>
+                <span id="count" aria-live="polite">Portada · 1 / 16</span>
+                <button type="button" id="next" title="Página siguiente" aria-label="Página siguiente">›</button>
+                <button type="button" id="fs" title="Pantalla completa" aria-label="Pantalla completa"
+                    aria-pressed="false">⛶</button>
+            </nav>
+        </div>
+
+    </main>
+
+    <script src="Script.js"></script>
+
+</body>
+
+</html>
